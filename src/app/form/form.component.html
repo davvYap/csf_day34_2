@@ -1,0 +1,19 @@
+<h3>Form</h3>
+
+<form [formGroup]="form">
+  <table>
+    <tr>
+      <td>
+        <p>Type something</p>
+        <input
+          type="text"
+          formControlName="words"
+          (keyup)="keyPressed($event)"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td *ngIf="invalidField('words')"><code>Invalid</code></td>
+    </tr>
+  </table>
+</form>
